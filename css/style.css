@@ -4,14 +4,14 @@
   --bg: #f8f5ef;
   --bg-2: #f1ece2;
   --bg-3: #fffdf9;
-  --wine: #402334;
-  --paper: #402334;
-  --muted: #6e6268;
-  --gold: #a5772f;
-  --gold-soft: #c9a45e;
-  --rose: #b06a88;
-  --border: rgba(64, 35, 52, 0.16);
-  --border-gold: rgba(165, 119, 47, 0.35);
+  --wine: #3a2a32;
+  --paper: #3a2a32;
+  --muted: #7b7169;
+  --gold: #8a6f45;
+  --gold-soft: #b3a077;
+  --rose: #8d7d6f;
+  --border: rgba(58, 42, 50, 0.14);
+  --border-gold: rgba(138, 111, 69, 0.3);
   --font-editorial: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Manrope', 'Helvetica Neue', sans-serif;
   --gutter: clamp(20px, 4.6vw, 76px);
@@ -26,7 +26,7 @@ html { scroll-behavior: smooth; }
 
 body {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(165, 119, 47, 0.10), transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(138, 111, 69, 0.08), transparent 60%),
     var(--bg);
   color: var(--wine);
   font-family: var(--font-body);
@@ -62,7 +62,7 @@ h1, h2, h3 {
   top: 0; left: 0;
   height: 2px;
   width: 0;
-  background: linear-gradient(90deg, var(--gold), var(--rose));
+  background: linear-gradient(90deg, var(--gold), var(--wine));
   z-index: 100;
   transition: width 0.1s linear;
 }
@@ -72,7 +72,7 @@ h1, h2, h3 {
   width: 560px;
   height: 560px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(165, 119, 47, 0.10), transparent 65%);
+  background: radial-gradient(circle, rgba(138, 111, 69, 0.07), transparent 65%);
   pointer-events: none;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -177,17 +177,7 @@ section { padding-block: var(--section-space); position: relative; }
 
 .section-title em {
   font-style: italic;
-  background: linear-gradient(100deg, var(--gold), var(--rose) 60%, var(--gold));
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 6s linear infinite;
-}
-
-@keyframes shimmer {
-  from { background-position: 0% center; }
-  to { background-position: 200% center; }
+  color: var(--gold);
 }
 
 .section-lead {
@@ -274,12 +264,7 @@ section { padding-block: var(--section-space); position: relative; }
 
 .hero-title em {
   font-style: italic;
-  background: linear-gradient(105deg, var(--gold) 10%, var(--rose) 45%, var(--gold-soft) 75%, var(--gold));
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 6s linear infinite;
+  color: var(--gold);
 }
 
 .hero-line { display: block; overflow: hidden; }
@@ -386,7 +371,7 @@ section { padding-block: var(--section-space); position: relative; }
   font-size: clamp(1.2rem, 2.6vw, 1.9rem);
   font-style: italic;
   letter-spacing: 0.05em;
-  color: var(--gold-soft);
+  color: #e9e1d4;
   text-transform: lowercase;
 }
 
@@ -629,7 +614,7 @@ section { padding-block: var(--section-space); position: relative; }
 
 .contact-section {
   background:
-    radial-gradient(ellipse 70% 60% at 50% 110%, rgba(165, 119, 47, 0.14), transparent 65%),
+    radial-gradient(ellipse 70% 60% at 50% 110%, rgba(138, 111, 69, 0.10), transparent 65%),
     var(--bg-2);
   border-top: 1px solid var(--border);
 }

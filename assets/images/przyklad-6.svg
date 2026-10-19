@@ -7,8 +7,8 @@
   </defs>
   <rect width="800" height="1000" fill="url(#bg)"/>
   <circle cx="400" cy="430" r="115" fill="none" stroke="#402334" stroke-width="10"/>
-  <circle cx="400" cy="430" r="160" fill="none" stroke="#a5772f" stroke-width="4"/>
-  <circle cx="525" cy="315" r="16" fill="#a5772f"/>
+  <circle cx="400" cy="430" r="160" fill="none" stroke="#8a6f45" stroke-width="4"/>
+  <circle cx="525" cy="315" r="16" fill="#8a6f45"/>
   <text x="400" y="720" font-family="Georgia, serif" font-size="46" font-style="italic" fill="#402334" text-anchor="middle">Z intencją</text>
   <text x="400" y="772" font-family="Helvetica, sans-serif" font-size="20" fill="#6e6268" text-anchor="middle">podmień na swoje zdjęcie biżuterii</text>
 </svg>
