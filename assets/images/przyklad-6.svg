@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#261523"/>
+      <stop offset="100%" stop-color="#120910"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="430" r="115" fill="none" stroke="#d8b46a" stroke-width="10"/>
+  <circle cx="400" cy="430" r="160" fill="none" stroke="#c98aa5" stroke-width="3" opacity="0.7"/>
+  <circle cx="525" cy="315" r="16" fill="#e9d5a8"/>
+  <text x="400" y="720" font-family="Georgia, serif" font-size="46" font-style="italic" fill="#f3ece4" text-anchor="middle">Z intencją</text>
+  <text x="400" y="772" font-family="Helvetica, sans-serif" font-size="20" fill="#b3a2ac" text-anchor="middle">podmień na swoje zdjęcie biżuterii</text>
+</svg>
