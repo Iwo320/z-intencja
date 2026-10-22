@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel — Z intencją</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f5ef;
+      --wine: #3a2a32;
+      --muted: #7b7169;
+      --gold: #8a6f45;
+      --border: rgba(58, 42, 50, 0.16);
+      --bg-3: #fffdf9;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      background:
+        radial-gradient(ellipse 70% 45% at 50% -8%, rgba(138, 111, 69, 0.10), transparent 60%),
+        var(--bg);
+      color: var(--wine);
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 18px clamp(20px, 5vw, 60px);
+      border-bottom: 1px solid var(--border);
+      background: rgba(248, 245, 239, 0.85);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+    }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .header-right { display: flex; align-items: center; gap: 18px; }
+    .badge {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 16px;
+    }
+    .logout {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-family: inherit;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .logout:hover { background: var(--wine); border-color: var(--wine); color: var(--bg); }
+    main {
+      width: min(calc(100% - 40px), 960px);
+      margin: 0 auto;
+      padding-block: clamp(40px, 6vw, 80px);
+    }
+    .eyebrow {
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+    .lead { color: var(--muted); max-width: 52ch; margin-bottom: 44px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      padding: 28px 26px;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(58, 42, 50, 0.10); }
+    .card-index {
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .card p { font-size: 0.85rem; color: var(--muted); }
+    .card a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .note {
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .note strong { color: var(--wine); }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="brand">Z intencją</p>
+    <div class="header-right">
+      <span class="badge">panel admina</span>
+      <button class="logout" data-logout>Wyloguj</button>
+    </div>
+  </header>
+
+  <main>
+    <p class="eyebrow">Witaj ponownie</p>
+    <h1>Panel <em>Z intencją</em></h1>
+    <p class="lead">
+      To chroniona strefa marki. Tutaj z czasem mogą pojawić się narzędzia
+      do zarządzania galerią i zamówieniami.
+    </p>
+
+    <div class="grid">
+      <article class="card">
+        <p class="card-index">01</p>
+        <h2>Galeria</h2>
+        <p>Wkrótce: dodawanie i podmiana zdjęć biżuterii prosto z panelu.</p>
+      </article>
+      <article class="card">
+        <p class="card-index">02</p>
+        <h2>Zamówienia</h2>
+        <p>Wkrótce: lista zapytań i zamówień z formularza kontaktowego.</p>
+      </article>
+      <article class="card">
+        <p class="card-index">03</p>
+        <h2>Treści</h2>
+        <p>Wkrótce: edycja opisów marki i kolekcji bez dotykania kodu.</p>
+      </article>
+    </div>
+
+    <p class="note">
+      <strong>Jak to działa:</strong> logowanie chronione hasłem (Cloudflare Pages
+      Functions + cookie sesji, 7 dni). Hasło i sekret sesji ustawiane są jako
+      sekrety projektu w panelu Cloudflare — nie są nigdzie widoczne w kodzie.
+    </p>
+  </main>
+
+  <script>
+    document.querySelector('[data-logout]').addEventListener('click', async () => {
+      await fetch('/api/logout', { method: 'POST' });
+      window.location.href = '/admin/login';
+    });
+  </script>
+</body>
+</html>
